@@ -256,6 +256,21 @@
 			<li>Manipulation</li>
 		</requiredCapacities>
 	</WorkGiverDef>
+	
+	<WorkGiverDef>
+		<defName>RemoveRoofs</defName>
+		<label>remove roofs</label>
+		<giverClass>WorkGiver_RemoveRoof</giverClass>
+		<workType>Construction</workType>
+		<priorityInType>110</priorityInType>
+		<verb>remove roof</verb>
+		<gerund>removing roof</gerund>
+		<scanThings>false</scanThings>
+		<scanCells>true</scanCells>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
 
 	<WorkGiverDef>
 		<defName>Deconstruct</defName>
@@ -278,21 +293,6 @@
 		<priorityInType>95</priorityInType>
 		<verb>uninstall</verb>
 		<gerund>uninstalling</gerund>
-		<requiredCapacities>
-			<li>Manipulation</li>
-		</requiredCapacities>
-	</WorkGiverDef>
-
-	<WorkGiverDef>
-		<defName>RemoveRoofs</defName>
-		<label>remove roofs</label>
-		<giverClass>WorkGiver_RemoveRoof</giverClass>
-		<workType>Construction</workType>
-		<priorityInType>7</priorityInType>
-		<verb>remove roof</verb>
-		<gerund>removing roof</gerund>
-		<scanThings>false</scanThings>
-		<scanCells>true</scanCells>
 		<requiredCapacities>
 			<li>Manipulation</li>
 		</requiredCapacities>
