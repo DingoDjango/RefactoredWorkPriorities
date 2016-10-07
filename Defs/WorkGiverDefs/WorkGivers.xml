@@ -213,11 +213,26 @@
 	</WorkGiverDef>
 
 	<WorkGiverDef>
+		<defName>BuildRoofs</defName>
+		<label>build roofs</label>
+		<giverClass>WorkGiver_BuildRoof</giverClass>
+		<workType>Construction</workType>
+		<priorityInType>190</priorityInType>
+		<verb>build roof</verb>
+		<gerund>building roof</gerund>
+		<scanThings>false</scanThings>
+		<scanCells>true</scanCells>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
 		<defName>ConstructDeliverResourcesToFrames</defName>
 		<label>deliver resources to frames</label>
 		<giverClass>WorkGiver_ConstructDeliverResourcesToFrames</giverClass>
 		<workType>Construction</workType>
-		<priorityInType>190</priorityInType>
+		<priorityInType>180</priorityInType>
 		<verb>work on</verb>
 		<gerund>working on</gerund>
 		<requiredCapacities>
@@ -232,7 +247,7 @@
 		<label>deliver resources to blueprints</label>
 		<giverClass>WorkGiver_ConstructDeliverResourcesToBlueprints</giverClass>
 		<workType>Construction</workType>
-		<priorityInType>180</priorityInType>
+		<priorityInType>170</priorityInType>
 		<verb>work on</verb>
 		<gerund>working on</gerund>
 		<requiredCapacities>
@@ -240,21 +255,6 @@
 		</requiredCapacities>
 		<canBeDoneByNonColonists>true</canBeDoneByNonColonists>
 		<prioritizeSustains>true</prioritizeSustains>
-	</WorkGiverDef>
-
-	<WorkGiverDef>
-		<defName>BuildRoofs</defName>
-		<label>build roofs</label>
-		<giverClass>WorkGiver_BuildRoof</giverClass>
-		<workType>Construction</workType>
-		<priorityInType>170</priorityInType>
-		<verb>build roof</verb>
-		<gerund>building roof</gerund>
-		<scanThings>false</scanThings>
-		<scanCells>true</scanCells>
-		<requiredCapacities>
-			<li>Manipulation</li>
-		</requiredCapacities>
 	</WorkGiverDef>
 	
 	<WorkGiverDef>
