@@ -1,22 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <WorkGivers>
 
-	<!-- ============= Cooking ============= -->
-	
-	<WorkGiverDef>
-		<defName>CookRefuel</defName>
-		<label>refuel (cooking)</label>
-		<giverClass>WorkGiver_Refuel</giverClass>
-		<workType>Cooking</workType>
-		<verb>refuel</verb>
-		<gerund>refueling</gerund>
-		<priorityInType>60</priorityInType>
-		<requiredCapacities>
-			<li>Manipulation</li>
-		</requiredCapacities>
-		<prioritizeSustains>true</prioritizeSustains>
-	</WorkGiverDef>
-	
 	<!-- ============= Construction ============= -->
 
 	<WorkGiverDef>
