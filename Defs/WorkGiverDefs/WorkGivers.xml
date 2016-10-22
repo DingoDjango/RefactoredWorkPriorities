@@ -220,6 +220,19 @@
 	</WorkGiverDef>
 
 	<WorkGiverDef>
+		<defName>HaulPlantFoodEdible</defName>
+		<label>haul edible plant food</label>
+		<giverClass>RWP.WorkGiver_HaulPlantFood</giverClass>
+		<workType>Hauling</workType>
+		<verb>haul</verb>
+		<gerund>hauling</gerund>
+		<priorityInType>110</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
 		<defName>Open</defName>
 		<label>open containers</label>
 		<giverClass>WorkGiver_Open</giverClass>
