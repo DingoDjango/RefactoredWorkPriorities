@@ -1,6 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <WorkGivers>
 
+	<!-- ============= Doctor ============= -->
+
+	<WorkGiverDef>
+		<defName>DoctorRescueHumanColonist</defName>
+		<label>rescue downed human allies</label>
+		<giverClass>RWP.WorkGiver_RescueDownedColonist</giverClass>
+		<workType>Doctor</workType>
+		<verb>rescue</verb>
+		<gerund>rescuing</gerund>
+		<priorityInType>90</priorityInType>
+		<directOrderable>false</directOrderable>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>DoctorTreatHumanColonist</defName>
+		<label>give treatment</label>
+		<giverClass>RWP.WorkGiver_TendHumanColonist</giverClass>
+		<workType>Doctor</workType>
+		<verb>treat</verb>
+		<gerund>treating</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+		<priorityInType>65</priorityInType>
+		<prioritizeSustains>true</prioritizeSustains>
+	</WorkGiverDef>
+
 	<!-- ============= Construction ============= -->
 
 	<WorkGiverDef>
