@@ -250,13 +250,26 @@
 	</WorkGiverDef>
 
 	<WorkGiverDef>
-		<defName>HaulPlantFoodEdible</defName>
-		<label>haul edible plant food</label>
-		<giverClass>RWP.WorkGiver_HaulPlantFood</giverClass>
+		<defName>HaulRottable</defName>
+		<label>haul rottable items</label>
+		<giverClass>RWP.WorkGiver_HaulRottable</giverClass>
 		<workType>Hauling</workType>
 		<verb>haul</verb>
 		<gerund>hauling</gerund>
 		<priorityInType>110</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<WorkGiverDef>
+		<defName>HaulDeteriorating</defName>
+		<label>haul deteriorating items</label>
+		<giverClass>RWP.WorkGiver_HaulDeteriorating</giverClass>
+		<workType>Hauling</workType>
+		<verb>haul</verb>
+		<gerund>hauling</gerund>
+		<priorityInType>105</priorityInType>
 		<requiredCapacities>
 			<li>Manipulation</li>
 		</requiredCapacities>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HugsLib.UpdateFeatureDef Abstract="true" Name="HMTBUpdateFeatures">
+		<modNameReadable>Refactored Work Priorities</modNameReadable>
+		<modIdentifier>RefactoredWorkPriorities</modIdentifier>
+		<linkUrl>https://ludeon.com/forums/index.php?topic=26077.0</linkUrl>
+	</HugsLib.UpdateFeatureDef>
+
+	<HugsLib.UpdateFeatureDef ParentName="HMTBUpdateFeatures">
+		<defName>RWP_1_4_0</defName>
+		<assemblyVersion>1.4.0</assemblyVersion>
+		<content>RWP uses some custom priorities that do not exist in vanilla RimWorld to make colonists behave more logically.\n\nYou can toggle the use of these custom priorities and read more about them in the menu (via tooltips).\n\nTo access the mod's menu, go to Menu &gt; Options &gt; Mod Settings.</content>
+	</HugsLib.UpdateFeatureDef>
+
+</Defs>

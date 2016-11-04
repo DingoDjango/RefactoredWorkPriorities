@@ -9,12 +9,7 @@ namespace RWP
 		public override bool HasJobOnThing(Pawn pawn, Thing t)
 		{
 			Pawn pawn2 = t as Pawn;
-			if (!pawn2.IsColonist)
-			{
-				return false;
-			}
-
-			return pawn2 != null && pawn2 != pawn && pawn2.InBed() && pawn2.health.ShouldBeTendedNow && pawn.CanReserve(pawn2, 1);
+			return pawn2 != null && pawn2 != pawn && pawn2.IsColonist && pawn2.InBed() && pawn2.health.ShouldBeTendedNow && pawn.CanReserve(pawn2, 1);
 		}
 	}
 }
