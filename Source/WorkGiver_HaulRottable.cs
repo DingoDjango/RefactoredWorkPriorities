@@ -8,9 +8,22 @@ namespace RWP
 {
 	public class WorkGiver_HaulRottable : WorkGiver_Scanner
 	{
-		public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn) //Lists all items with the rottable comp and sorts by fastest rotting to slowest
+		public override bool Prioritized
 		{
-			return ListerHaulables.ThingsPotentiallyNeedingHauling().Where(t => t.def.comps.Exists(tc => tc.compClass == typeof(CompRottable))).OrderBy(t => t.def.GetCompProperties<CompProperties_Rottable>().daysToRotStart);
+			get
+			{
+				return true;
+			}
+		}
+
+		public override bool ShouldSkip(Pawn pawn)
+		{
+			return ListerHaulables.ThingsPotentiallyNeedingHauling().Count == 0;
+		}
+
+		public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn) //Lists all items which need hauling and have CompProperties_Rottable
+		{
+			return ListerHaulables.ThingsPotentiallyNeedingHauling().Where(t => t.def.comps.Exists(tc => tc.compClass == typeof(CompRottable)));
 		}
 
 		public override Job JobOnThing(Pawn pawn, Thing t)
@@ -21,6 +34,13 @@ namespace RWP
 			}
 
 			return HaulAIUtility.HaulToStorageJob(pawn, t);
+		}
+
+		public override float GetPriority(Pawn pawn, TargetInfo t)
+		{
+			Thing thing = t.Thing;
+			var rottability = thing.def.GetCompProperties<CompProperties_Rottable>().daysToRotStart;
+			return (1f) / (rottability);
 		}
 	}
 }

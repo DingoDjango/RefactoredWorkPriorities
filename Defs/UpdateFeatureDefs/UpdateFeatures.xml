@@ -13,4 +13,10 @@
 		<content>RWP uses some custom priorities that do not exist in vanilla RimWorld to make colonists behave more logically.\n\nYou can toggle the use of these custom priorities and read more about them in the menu (via tooltips).\n\nTo access the mod's menu, go to Menu &gt; Options &gt; Mod Settings.</content>
 	</HugsLib.UpdateFeatureDef>
 
+	<HugsLib.UpdateFeatureDef ParentName="HMTBUpdateFeatures">
+		<defName>RWP_1_4_1</defName>
+		<assemblyVersion>1.4.1</assemblyVersion>
+		<content>\n- All custom work orders are now individually togglable in the mod's menu.\n\n- Fixed Haul Rottables. Haulers will prioritise the fastest rotting items.\n\n- Fixed Haul Deterioratables. Haulers will prioritise the fastest deteriorating items.\n\nTo access the mod's menu, go to Mod Settings in RimWorld's Options menu.</content>
+	</HugsLib.UpdateFeatureDef>
+
 </Defs>

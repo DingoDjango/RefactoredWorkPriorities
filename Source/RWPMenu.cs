@@ -1,43 +1,50 @@
 ﻿using HugsLib;
 using RimWorld;
 
-[DefOf]
-public static class RWPDefs
+namespace RWP
 {
-    public static WorkGiverDef DoctorRescueHumanColonist;
-    public static WorkGiverDef DoctorTreatHumanColonist;
-    public static WorkGiverDef HaulRottable;
-    public static WorkGiverDef HaulDeteriorating;
-}
+	[DefOf]
+	public static class RWPDefs
+	{
+		public static WorkGiverDef DoctorRescueHumanColonist;
+		public static WorkGiverDef DoctorTreatHumanColonist;
+		public static WorkGiverDef HaulRottable;
+		public static WorkGiverDef HaulDeteriorating;
+	}
 
-public class RWPMenu : ModBase
-{
-    public override string ModIdentifier
-    {
-        get
-        {
-            return "RefactoredWorkPriorities";
-        }
-    }
+	public class RWPMenu : ModBase
+	{
+		public override string ModIdentifier
+		{
+			get
+			{
+				return "RefactoredWorkPriorities";
+			}
+		}
 
-    public override void DefsLoaded()
-    {
-        UpdateDefs();
-    }
+		public override void DefsLoaded()
+		{
+			UpdateDefs();
+		}
 
-    public override void SettingsChanged()
-    {
-        UpdateDefs();
-    }
+		public override void SettingsChanged()
+		{
+			UpdateDefs();
+		}
 
-    private void UpdateDefs()
-    {
-        var customDoctor = Settings.GetHandle<bool>("CustomDoctorPriorities", "Custom Doctor priorities", "Doctors will rescue and treat colonists before animals or outsiders.", true);
-        RWPDefs.DoctorRescueHumanColonist.scanThings = customDoctor.Value;
-        RWPDefs.DoctorTreatHumanColonist.scanThings = customDoctor.Value;
+		private void UpdateDefs()
+		{
+			var doctorRescueColonist = Settings.GetHandle<bool>("DoctorRescueColonist", "[Doctor] Prioritise rescuing colonists", "Doctors will rescue allied colonists before rescuing animals or outsiders.", true);
+			RWPDefs.DoctorRescueHumanColonist.scanThings = doctorRescueColonist.Value;
 
-        var customHaul = Settings.GetHandle<bool>("CustomHaulPriorities", "Custom Haul priorities", "Haulers will haul rottable items (corn, meals etc.) and items which deteriorate over time (weapons, wood etc.) before generic things.", true);
-        RWPDefs.HaulRottable.scanThings = customHaul.Value;
-        RWPDefs.HaulDeteriorating.scanThings = customHaul.Value;
-    }
+			var doctorTreatColonist = Settings.GetHandle<bool>("DoctorTreatColonist", "[Doctor] Prioritise treating colonists", "Doctors will treat colonist injuries before treating animals or outsiders.", true);
+			RWPDefs.DoctorTreatHumanColonist.scanThings = doctorTreatColonist.Value;
+
+			var haulRottables = Settings.GetHandle<bool>("HaulRottables", "[Haul] Prioritise hauling rottables", "Haulers will haul rottable items (corn, meals etc.) before generic things.", true);
+			RWPDefs.HaulRottable.scanThings = haulRottables.Value;
+
+			var haulDeterioratables = Settings.GetHandle<bool>("HaulDeterioratables", "[Haul] Prioritise hauling deterioratables", "Haulers will haul items which deteriorate over time (weapons, wood etc.) before generic things.", true);
+			RWPDefs.HaulDeteriorating.scanThings = haulDeterioratables.Value;
+		}
+	}
 }
