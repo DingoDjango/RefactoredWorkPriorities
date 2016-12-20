@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-	<setting_doctorRescueColonist_label>&lt;b&gt;[Doctor]&lt;/b&gt; Prioritise rescuing colonists</setting_doctorRescueColonist_label>
-	<setting_doctorRescueColonist_desc>Doctors will rescue allied colonists before rescuing animals or outsiders.</setting_doctorRescueColonist_desc>
+	<setting_doctorRescueColonist_label>&lt;b&gt;[医生]&lt;/b&gt; 优先营救居民</setting_doctorRescueColonist_label>
+	<setting_doctorRescueColonist_desc>医生会优先营救居民然后是动物或者外来者。</setting_doctorRescueColonist_desc>
 
-	<setting_doctorTreatColonist_label>&lt;b&gt;[Doctor]&lt;/b&gt; Prioritise treating colonists</setting_doctorTreatColonist_label>
-	<setting_doctorTreatColonist_desc>Doctors will treat colonist injuries before treating animals or outsiders.</setting_doctorTreatColonist_desc>
+	<setting_doctorTreatColonist_label>&lt;b&gt;[医生]&lt;/b&gt; 优先治疗居民</setting_doctorTreatColonist_label>
+	<setting_doctorTreatColonist_desc>医生会优先治疗居民然后是动物或者外来者。</setting_doctorTreatColonist_desc>
 
-	<setting_haulRottables_label>&lt;b&gt;[Haul]&lt;/b&gt; Prioritise hauling rottables</setting_haulRottables_label>
-	<setting_haulRottables_desc>Haulers will haul rottable items (corn, meals etc.) before generic things.</setting_haulRottables_desc>
+	<setting_haulRottables_label>&lt;b&gt;[搬运工]&lt;/b&gt; 优先搬运易腐烂的物品</setting_haulRottables_label>
+	<setting_haulRottables_desc>搬运工会优先搬运易腐烂的物品（如玉米，食物，等等）然后是一般物品。</setting_haulRottables_desc>
 
-	<setting_haulDeterioratables_label>&lt;b&gt;[Haul]&lt;/b&gt; Prioritise hauling deterioratables</setting_haulDeterioratables_label>
-	<setting_haulDeterioratables_desc>Haulers will haul items which deteriorate over time (weapons, wood etc.) before generic things.</setting_haulDeterioratables_desc>
+	<setting_haulDeterioratables_label>&lt;b&gt;[搬运工]&lt;/b&gt; 优先搬运易老化的物品</setting_haulDeterioratables_label>
+	<setting_haulDeterioratables_desc>搬运工会优先搬运易老化的物品（如武器，木头，等等）然后是一般物品。</setting_haulDeterioratables_desc>
 
 </LanguageData>
