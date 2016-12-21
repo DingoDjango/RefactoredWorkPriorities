@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-	<setting_doctorRescueColonist_label>&lt;b&gt;[Doctor]&lt;/b&gt; Prioritise rescuing colonists</setting_doctorRescueColonist_label>
-	<setting_doctorRescueColonist_desc>Doctors will rescue allied colonists before rescuing animals or outsiders.</setting_doctorRescueColonist_desc>
+	<RWP_setting_doctorTreatColonist_label>&lt;b&gt;[Doctor]&lt;/b&gt; Prioritise treating colonists</RWP_setting_doctorTreatColonist_label>
+	<RWP_setting_doctorTreatColonist_desc>Doctors will treat colonist injuries before treating animals or outsiders.</RWP_setting_doctorTreatColonist_desc>
 
-	<setting_doctorTreatColonist_label>&lt;b&gt;[Doctor]&lt;/b&gt; Prioritise treating colonists</setting_doctorTreatColonist_label>
-	<setting_doctorTreatColonist_desc>Doctors will treat colonist injuries before treating animals or outsiders.</setting_doctorTreatColonist_desc>
+	<RWP_setting_haulRottables_label>&lt;b&gt;[Haul]&lt;/b&gt; Prioritise hauling rottables</RWP_setting_haulRottables_label>
+	<RWP_setting_haulRottables_desc>Haulers will haul rottable items (corn, meals etc.) before generic things.</RWP_setting_haulRottables_desc>
 
-	<setting_haulRottables_label>&lt;b&gt;[Haul]&lt;/b&gt; Prioritise hauling rottables</setting_haulRottables_label>
-	<setting_haulRottables_desc>Haulers will haul rottable items (corn, meals etc.) before generic things.</setting_haulRottables_desc>
-
-	<setting_haulDeterioratables_label>&lt;b&gt;[Haul]&lt;/b&gt; Prioritise hauling deterioratables</setting_haulDeterioratables_label>
-	<setting_haulDeterioratables_desc>Haulers will haul items which deteriorate over time (weapons, wood etc.) before generic things.</setting_haulDeterioratables_desc>
+	<RWP_setting_haulDeterioratables_label>&lt;b&gt;[Haul]&lt;/b&gt; Prioritise hauling deterioratables</RWP_setting_haulDeterioratables_label>
+	<RWP_setting_haulDeterioratables_desc>Haulers will haul items which deteriorate over time (weapons, wood etc.) before generic things.</RWP_setting_haulDeterioratables_desc>
 
 </LanguageData>

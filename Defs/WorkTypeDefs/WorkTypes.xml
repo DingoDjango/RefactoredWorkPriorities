@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorkTypeDefs>
+
+	<WorkTypeDef>
+		<defName>Repair</defName>
+		<labelShort>Repair</labelShort>
+		<pawnLabel>Repairer</pawnLabel>
+		<gerundLabel>Repairing</gerundLabel>
+		<description>Fix damaged or broken-down buildings.</description>
+		<verb>Repair</verb>
+		<naturalPriority>925</naturalPriority>
+		<requireCapableColonist>true</requireCapableColonist>
+		<relevantSkills>
+			<li>Construction</li>
+		</relevantSkills>
+		<workTags>
+			<li>ManualSkilled</li>
+		</workTags>
+	</WorkTypeDef>
+
+</WorkTypeDefs>

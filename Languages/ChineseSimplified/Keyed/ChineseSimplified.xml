@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-	<setting_doctorRescueColonist_label>&lt;b&gt;[医生]&lt;/b&gt; 优先营救居民</setting_doctorRescueColonist_label>
-	<setting_doctorRescueColonist_desc>医生会优先营救居民然后是动物或者外来者。</setting_doctorRescueColonist_desc>
+	<RWP_setting_doctorTreatColonist_label>&lt;b&gt;[医生]&lt;/b&gt; 优先治疗居民</RWP_setting_doctorTreatColonist_label>
+	<RWP_setting_doctorTreatColonist_desc>医生会优先治疗居民然后是动物或者外来者。</RWP_setting_doctorTreatColonist_desc>
 
-	<setting_doctorTreatColonist_label>&lt;b&gt;[医生]&lt;/b&gt; 优先治疗居民</setting_doctorTreatColonist_label>
-	<setting_doctorTreatColonist_desc>医生会优先治疗居民然后是动物或者外来者。</setting_doctorTreatColonist_desc>
+	<RWP_setting_haulRottables_label>&lt;b&gt;[搬运工]&lt;/b&gt; 优先搬运易腐烂的物品</RWP_setting_haulRottables_label>
+	<RWP_setting_haulRottables_desc>搬运工会优先搬运易腐烂的物品（如玉米，食物，等等）然后是一般物品。</RWP_setting_haulRottables_desc>
 
-	<setting_haulRottables_label>&lt;b&gt;[搬运工]&lt;/b&gt; 优先搬运易腐烂的物品</setting_haulRottables_label>
-	<setting_haulRottables_desc>搬运工会优先搬运易腐烂的物品（如玉米，食物，等等）然后是一般物品。</setting_haulRottables_desc>
-
-	<setting_haulDeterioratables_label>&lt;b&gt;[搬运工]&lt;/b&gt; 优先搬运易老化的物品</setting_haulDeterioratables_label>
-	<setting_haulDeterioratables_desc>搬运工会优先搬运易老化的物品（如武器，木头，等等）然后是一般物品。</setting_haulDeterioratables_desc>
+	<RWP_setting_haulDeterioratables_label>&lt;b&gt;[搬运工]&lt;/b&gt; 优先搬运易老化的物品</RWP_setting_haulDeterioratables_label>
+	<RWP_setting_haulDeterioratables_desc>搬运工会优先搬运易老化的物品（如武器，木头，等等）然后是一般物品。</RWP_setting_haulDeterioratables_desc>
 
 </LanguageData>
