@@ -4,6 +4,9 @@
 	<RWP_setting_doctorTreatColonist_label>&lt;b&gt;[医生]&lt;/b&gt; 优先治疗居民</RWP_setting_doctorTreatColonist_label>
 	<RWP_setting_doctorTreatColonist_desc>医生会优先治疗居民然后是动物或者外来者。</RWP_setting_doctorTreatColonist_desc>
 
+	<RWP_setting_repairThresholdInt_label>&lt;b&gt;[Repair]&lt;/b&gt; Repair threshold percentage</RWP_setting_repairThresholdInt_label>
+	<RWP_setting_repairThresholdInt_desc>Determines the hit-points percentage for colonists to start repairing damaged things. Colonists will not repair things with HP above this percentage.</RWP_setting_repairThresholdInt_desc>
+
 	<RWP_setting_haulRottables_label>&lt;b&gt;[搬运工]&lt;/b&gt; 优先搬运易腐烂的物品</RWP_setting_haulRottables_label>
 	<RWP_setting_haulRottables_desc>搬运工会优先搬运易腐烂的物品（如玉米，食物，等等）然后是一般物品。</RWP_setting_haulRottables_desc>
 

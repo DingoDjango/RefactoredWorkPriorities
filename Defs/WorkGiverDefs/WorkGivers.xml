@@ -53,7 +53,7 @@
 	<WorkGiverDef>
 		<defName>Repair</defName>
 		<label>repair damaged things</label>
-		<giverClass>WorkGiver_Repair</giverClass>
+		<giverClass>RWP.WorkGiver_RepairCustom</giverClass>
 		<workType>Repair</workType>
 		<priorityInType>50</priorityInType>
 		<verb>repair</verb>
