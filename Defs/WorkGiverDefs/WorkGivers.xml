@@ -118,7 +118,7 @@
 		<workType>Hauling</workType>
 		<verb>haul</verb>
 		<gerund>hauling</gerund>
-		<priorityInType>48</priorityInType>
+		<priorityInType>43</priorityInType>
 		<requiredCapacities>
 			<li>Manipulation</li>
 		</requiredCapacities>
