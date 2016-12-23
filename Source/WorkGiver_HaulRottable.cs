@@ -5,8 +5,8 @@ using Verse;
 
 namespace RWP
 {
-	public class WorkGiver_HaulRottable : WorkGiver_Scanner
-	{
+	public class WorkGiver_HaulRottable : WorkGiver_HaulGeneral
+    {
 		public static bool PrioritizeRottable = true;
 
 		public override bool Prioritized
