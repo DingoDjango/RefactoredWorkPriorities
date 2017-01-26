@@ -32,11 +32,17 @@ namespace RWP
 			var repairThresholdInt = Settings.GetHandle<int>("RWP_Repair_RepairThresholdInt", "RWP_setting_repairThresholdInt_label".Translate(), "RWP_setting_repairThresholdInt_desc".Translate(), 100, Validators.IntRangeValidator(0, 100));
 			WorkGiver_RepairCustom.RepairThreshold = repairThresholdInt.Value;
 
-			var haulRottables = Settings.GetHandle<bool>("HaulRottables", "RWP_setting_haulRottables_label".Translate(), "RWP_setting_haulRottables_desc".Translate(), true);
+			var haulRottables = Settings.GetHandle<bool>("RWP_Haul_HaulRottables", "RWP_setting_haulRottables_label".Translate(), "RWP_setting_haulRottables_desc".Translate(), true);
 			WorkGiver_HaulRottable.PrioritizeRottable = haulRottables.Value;
 
-			var haulDeterioratables = Settings.GetHandle<bool>("HaulDeterioratables", "RWP_setting_haulDeterioratables_label".Translate(), "RWP_setting_haulDeterioratables_desc".Translate(), true);
+			var haulRottablesSkipDessicated = Settings.GetHandle<bool>("RWP_Haul_HaulRottablesSkipDessicated", "RWP_setting_haulRottablesSkipDessicated_label".Translate(), "RWP_setting_haulRottablesSkipDessicated_desc".Translate(), true);
+			WorkGiver_HaulRottable.SkipDessicated = haulRottablesSkipDessicated.Value;
+
+			var haulDeterioratables = Settings.GetHandle<bool>("RWP_Haul_HaulDeterioratables", "RWP_setting_haulDeterioratables_label".Translate(), "RWP_setting_haulDeterioratables_desc".Translate(), true);
 			WorkGiver_HaulDeteriorating.PrioritizeDeteriorating = haulDeterioratables.Value;
+
+			var haulDeterioratables_HealthThresholdInt = Settings.GetHandle<int>("RWP_Haul_HaulDeterioratables_HealthThresholdInt", "RWP_setting_haulDeterioratables_HealthThresholdInt".Translate(), "RWP_setting_haulDeterioratables_HealthThresholdInt_desc".Translate(), 35);
+			WorkGiver_HaulDeteriorating.DeterioratableMinHealthPercent = haulDeterioratables_HealthThresholdInt.Value;
 		}
 	}
 }

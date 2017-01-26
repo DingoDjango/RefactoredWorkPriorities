@@ -9,6 +9,8 @@ namespace RWP
 	{
 		public static bool PrioritizeDeteriorating = true;
 
+		public static int DeterioratableMinHealthPercent = 35;
+
 		public override bool Prioritized
 		{
 			get
@@ -22,6 +24,13 @@ namespace RWP
 			return !PrioritizeDeteriorating;
 		}
 
+		public override bool HasJobOnThing(Pawn pawn, Thing t)
+		{
+			float tHealthPercent = (100 * t.HitPoints) / t.MaxHitPoints;
+
+			return base.HasJobOnThing(pawn, t) && tHealthPercent >= DeterioratableMinHealthPercent;
+		}
+
 		public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn) //Lists all items with DeteriorationRate above 0 that aren't under a roof
 		{
 			return pawn.Map.listerHaulables.ThingsPotentiallyNeedingHauling().Where(t => GridsUtility.GetRoof(t.Position, t.Map) == null && t.GetStatValue(StatDefOf.DeteriorationRate, true) > 0f);
@@ -33,9 +42,9 @@ namespace RWP
 
 			float priority = (1f) / (thing.HitPoints / thing.GetStatValue(StatDefOf.DeteriorationRate, true));
 
-			if (thing.HitPoints <= (thing.MaxHitPoints / 5))
+			if (thing.HitPoints <= (thing.MaxHitPoints / 10))
 			{
-				priority *= 0.1f;
+				priority = 0f;
 			}
 
 			return priority;
