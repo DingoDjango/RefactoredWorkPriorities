@@ -3,12 +3,8 @@
 	<name>Refactored Work Priorities</name>
 	<author>Dingo</author>
 	<url>https://ludeon.com/forums/index.php?topic=26077</url>
-	<targetVersion>0.16.0</targetVersion>
-	<description>&lt;color=red&gt;&lt;size=24&gt;Important:&lt;/size&gt;
+	<targetVersion>0.17.0</targetVersion>
+	<description>This once medium-scale mod is now a collection of minor tweaks to RimWorld's work priorities.
 
-This mod requires &lt;b&gt;HugsLib&lt;/b&gt;, it must be installed and loaded above this mod in the load order.&lt;/color&gt;
-
-Tweaks work priorities to try and make pawn behaviour more intuitive and predictable.
-
-For the full list of changes please visit the Steam Workshop page or forum thread.</description>
+Requires no other mods to function, and is compatible with mostly everything.</description>
 </ModMetaData>
