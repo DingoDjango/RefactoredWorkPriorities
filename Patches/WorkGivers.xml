@@ -4,14 +4,14 @@
 	<!-- Remove feeding sick animals from doctors, given to handlers -->
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//WorkGiverDef[defName = "DoctorFeedAnimals"]/workType</xpath>
+		<xpath>/WorkGivers/WorkGiverDef[defName = "DoctorFeedAnimals"]/workType</xpath>
 		<value>
 			<workType>Handling</workType>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//WorkGiverDef[defName = "DoctorFeedAnimals"]/priorityInType</xpath>
+		<xpath>/WorkGivers/WorkGiverDef[defName = "DoctorFeedAnimals"]/priorityInType</xpath>
 		<value>
 			<priorityInType>110</priorityInType>
 		</value>
@@ -20,14 +20,14 @@
 	<!-- Prioritise roof removal over building roofs -->
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//WorkGiverDef[defName = "RemoveRoofs"]/priorityInType</xpath>
+		<xpath>/WorkGivers/WorkGiverDef[defName = "RemoveRoofs"]/priorityInType</xpath>
 		<value>
 			<priorityInType>70</priorityInType>
 		</value>
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>//WorkGiverDef[defName = "BuildRoofs"]/priorityInType</xpath>
+		<xpath>/WorkGivers/WorkGiverDef[defName = "BuildRoofs"]/priorityInType</xpath>
 		<value>
 			<priorityInType>60</priorityInType>
 		</value>
