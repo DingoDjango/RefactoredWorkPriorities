@@ -1,37 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-	<!-- Remove feeding sick animals from doctors, given to handlers -->
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<Operations>
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>/WorkGivers/WorkGiverDef[defName = "DoctorFeedAnimals"]/workType</xpath>
-		<value>
-			<workType>Handling</workType>
-		</value>
+			<!-- Remove feeding sick animals from doctors, given to handlers -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/WorkGivers/WorkGiverDef[defName = "DoctorFeedAnimals"]/workType</xpath>
+				<value>
+					<workType>Handling</workType>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/WorkGivers/WorkGiverDef[defName = "DoctorFeedAnimals"]/priorityInType</xpath>
+				<value>
+					<priorityInType>110</priorityInType>
+				</value>
+			</li>
+
+			<!-- Prioritise roof removal over building roofs -->
+
+			<li Class="PatchOperationReplace">
+				<xpath>/WorkGivers/WorkGiverDef[defName = "RemoveRoofs"]/priorityInType</xpath>
+				<value>
+					<priorityInType>70</priorityInType>
+				</value>
+			</li>
+
+			<li Class="PatchOperationReplace">
+				<xpath>/WorkGivers/WorkGiverDef[defName = "BuildRoofs"]/priorityInType</xpath>
+				<value>
+					<priorityInType>60</priorityInType>
+				</value>
+			</li>
+
+		</Operations>
 	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>/WorkGivers/WorkGiverDef[defName = "DoctorFeedAnimals"]/priorityInType</xpath>
-		<value>
-			<priorityInType>110</priorityInType>
-		</value>
-	</Operation>
-
-	<!-- Prioritise roof removal over building roofs -->
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>/WorkGivers/WorkGiverDef[defName = "RemoveRoofs"]/priorityInType</xpath>
-		<value>
-			<priorityInType>70</priorityInType>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>/WorkGivers/WorkGiverDef[defName = "BuildRoofs"]/priorityInType</xpath>
-		<value>
-			<priorityInType>60</priorityInType>
-		</value>
-	</Operation>
-
 
 </Patch>
