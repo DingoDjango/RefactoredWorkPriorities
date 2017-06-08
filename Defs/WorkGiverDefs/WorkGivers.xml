@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<WorkGivers>
+
+	<!-- Haul rottable: priority below RearmTraps, above DoBillsCremate / HandMeThatBrick -->
+
+	<WorkGiverDef>
+		<defName>HaulRottable</defName>
+		<label>haul rottable items</label>
+		<giverClass>RWP.WorkGiver_HaulRottable</giverClass>
+		<workType>Hauling</workType>
+		<verb>haul</verb>
+		<gerund>hauling</gerund>
+		<priorityInType>49</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+	<!-- Haul deterioratable: priority below HandMeThatBrick, above DoBillsCremate -->
+
+	<WorkGiverDef>
+		<defName>HaulDeteriorating</defName>
+		<label>haul deteriorating items</label>
+		<giverClass>RWP.WorkGiver_HaulDeteriorating</giverClass>
+		<workType>Hauling</workType>
+		<verb>haul</verb>
+		<gerund>hauling</gerund>
+		<priorityInType>43</priorityInType>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
+</WorkGivers>

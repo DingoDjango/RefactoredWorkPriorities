@@ -17,6 +17,15 @@
 		</value>
 	</Operation>
 
+	<!-- Replace Repair giverClass -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/WorkGivers/WorkGiverDef[defName = "Repair"]/giverClass</xpath>
+		<value>
+			<giverClass>RWP.WorkGiver_RepairCustom</giverClass>
+		</value>
+	</Operation>	
+
 	<!-- Prioritise roof removal over building roofs -->
 
 	<Operation Class="PatchOperationReplace">
@@ -32,6 +41,5 @@
 			<priorityInType>60</priorityInType>
 		</value>
 	</Operation>
-
 
 </Patch>
