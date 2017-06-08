@@ -1,4 +1,4 @@
-![Refactored Work Priorities](http://i.imgur.com/HNRMvx7.png)
+![Refactored Work Priorities](http://i.imgur.com/WmWF72A.png)
 
 Grants you additional control over colonists, including some tweaks to their work priorities and schedules.
 
