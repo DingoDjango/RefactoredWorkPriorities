@@ -15,4 +15,7 @@
 	<RWP_setting_haulDeterioratables_HealthThresholdInt>&lt;b&gt;[Haul]&lt;/b&gt; Deterioratable HP threshold percentage: &lt;b&gt;&lt;color=orange&gt;{0}%&lt;/color&gt;&lt;/b&gt;</RWP_setting_haulDeterioratables_HealthThresholdInt>
 	<RWP_setting_haulDeterioratables_HealthThresholdInt_desc>If "Prioritise hauling deterioratables" is enabled, skip items if their current health falls below this percentage.</RWP_setting_haulDeterioratables_HealthThresholdInt_desc>
 
+	<Designator_ForcedRepair>Repair (Ignore Threshold)</Designator_ForcedRepair>
+	<Designator_ForcedRepairDesc>Instruct colonists to repair the designated buildings even if their HP is above the assigned Repair Threshold.</Designator_ForcedRepairDesc>	
+
 </LanguageData>

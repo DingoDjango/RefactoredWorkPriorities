@@ -6,11 +6,11 @@ namespace RWP
 	{
 		public static int RepairThreshold = 100;
 
-        public static bool PrioritizeRottable = true;
+		public static bool PrioritizeRottable = true;
 
-        public static bool PrioritizeDeteriorating = true;
+		public static bool PrioritizeDeteriorating = true;
 
-        public static int DeterioratableMinHealthPercent = 35;
+		public static int DeterioratableMinHealthPercent = 35;
 
 		public override void ExposeData()
 		{

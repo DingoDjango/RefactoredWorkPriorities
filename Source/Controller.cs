@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using RimWorld;
+﻿using RimWorld;
+using UnityEngine;
 using Verse;
 
 namespace RWP
@@ -11,8 +11,9 @@ namespace RWP
 			GetSettings<Settings>();
 		}
 
-		public WorkGiverDef DefOf_HaulRottable => DefDatabase<WorkGiverDef>.GetNamed("HaulRottable");
-		public WorkGiverDef DefOf_HaulDeteriorating => DefDatabase<WorkGiverDef>.GetNamed("HaulDeteriorating");
+		public static WorkGiverDef DefOf_HaulRottable => DefDatabase<WorkGiverDef>.GetNamed("HaulRottable");
+		public static WorkGiverDef DefOf_HaulDeteriorating => DefDatabase<WorkGiverDef>.GetNamed("HaulDeteriorating");
+		public static DesignationDef DefOf_RWP_ForcedRepair => DefDatabase<DesignationDef>.GetNamed("RWP_ForcedRepair");
 
 		public override void WriteSettings()
 		{

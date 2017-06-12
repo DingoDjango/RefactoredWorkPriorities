@@ -47,6 +47,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JobDriver_RepairCustom.cs" />
+    <Compile Include="Designator_ForcedRepair.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="WorkGiver_RepairCustom.cs" />

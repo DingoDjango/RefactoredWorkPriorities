@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Replace Repair driverClass -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/JobDef[defName = "Repair"]/driverClass</xpath>
+		<value>
+			<driverClass>RWP.JobDriver_RepairCustom</driverClass>
+		</value>
+	</Operation>	
+
+</Patch>
