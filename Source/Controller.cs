@@ -1,5 +1,4 @@
-﻿using RimWorld;
-using UnityEngine;
+﻿using UnityEngine;
 using Verse;
 
 namespace RWP
@@ -9,17 +8,6 @@ namespace RWP
 		public Controller(ModContentPack content) : base(content)
 		{
 			GetSettings<Settings>();
-		}
-
-		public static WorkGiverDef DefOf_HaulRottable => DefDatabase<WorkGiverDef>.GetNamed("HaulRottable");
-		public static WorkGiverDef DefOf_HaulDeteriorating => DefDatabase<WorkGiverDef>.GetNamed("HaulDeteriorating");
-		public static DesignationDef DefOf_RWP_ForcedRepair => DefDatabase<DesignationDef>.GetNamed("RWP_ForcedRepair");
-
-		public override void WriteSettings()
-		{
-			base.WriteSettings();
-			DefOf_HaulRottable.scanThings = Settings.PrioritizeRottable;
-			DefOf_HaulDeteriorating.scanThings = Settings.PrioritizeDeteriorating;
 		}
 
 		public override void DoSettingsWindowContents(Rect inRect)
@@ -35,15 +23,14 @@ namespace RWP
 				Rect currentRect = list.GetRect(Text.LineHeight);
 				Rect currentRectLeft = currentRect.LeftHalf().Rounded();
 				Rect currentRectRight = currentRect.RightHalf().Rounded();
-				string RepairThreshold_label = "RWP_setting_repairThresholdInt_label".Translate(new object[] { Settings.RepairThreshold });
 
 				//Text label for repair threshold, translated, with tooltip.
-				Widgets.Label(currentRectLeft, RepairThreshold_label);
+				Widgets.Label(currentRectLeft, Settings.labelRepairThreshold);
 				if (Mouse.IsOver(currentRectLeft))
 				{
 					Widgets.DrawHighlight(currentRectLeft);
 				}
-				TooltipHandler.TipRegion(currentRectLeft, "RWP_setting_repairThresholdInt_desc".Translate());
+				TooltipHandler.TipRegion(currentRectLeft, Settings.descRepairThreshold);
 
 				//Increment value by -1 (button).
 				if (Widgets.ButtonText(new Rect(currentRectRight.xMin, currentRectRight.y, currentRectRight.height, currentRectRight.height), "-", true, false, true))
@@ -69,11 +56,11 @@ namespace RWP
 
 			list.Gap(20f);
 
-			list.CheckboxLabeled("RWP_setting_haulRottables_label".Translate(), ref Settings.PrioritizeRottable, "RWP_setting_haulRottables_desc".Translate());
+			list.CheckboxLabeled(Settings.labelPrioritizeRottable, ref Settings.PrioritizeRottable, Settings.descPrioritizeRottable);
 
 			list.Gap(20f);
 
-			list.CheckboxLabeled("RWP_setting_haulDeterioratables_label".Translate(), ref Settings.PrioritizeDeteriorating, "RWP_setting_haulDeterioratables_desc".Translate());
+			list.CheckboxLabeled(Settings.labelPrioritizeDeteriorating, ref Settings.PrioritizeDeteriorating, Settings.descPrioritizeDeteriorating);
 
 			list.Gap(20f);
 
@@ -82,15 +69,14 @@ namespace RWP
 				Rect currentRect = list.GetRect(Text.LineHeight);
 				Rect currentRectLeft = currentRect.LeftHalf().Rounded();
 				Rect currentRectRight = currentRect.RightHalf().Rounded();
-				string DeterioratableMinHealthPercent_label = "RWP_setting_haulDeterioratables_HealthThresholdInt".Translate(new object[] { Settings.DeterioratableMinHealthPercent });
 
-				//Text label for repair threshold, translated, with tooltip.
-				Widgets.Label(currentRectLeft, DeterioratableMinHealthPercent_label);
+				//Text label for item haul threshold, translated, with tooltip.
+				Widgets.Label(currentRectLeft, Settings.labelDeterioratableMinHealth);
 				if (Mouse.IsOver(currentRectLeft))
 				{
 					Widgets.DrawHighlight(currentRectLeft);
 				}
-				TooltipHandler.TipRegion(currentRectLeft, "RWP_setting_haulDeterioratables_HealthThresholdInt_desc".Translate());
+				TooltipHandler.TipRegion(currentRectLeft, Settings.descDeterioratableMinHealth);
 
 				//Increment value by -1 (button).
 				if (Widgets.ButtonText(new Rect(currentRectRight.xMin, currentRectRight.y, currentRectRight.height, currentRectRight.height), "-", true, false, true))
@@ -119,7 +105,7 @@ namespace RWP
 
 		public override string SettingsCategory()
 		{
-			return "RWP".Translate();
+			return "Refactored Work Priorities";
 		}
 	}
 }

@@ -42,4 +42,13 @@
 		</value>
 	</Operation>
 
+	<!-- Plant Cut only if the plant does not yield a harvestedThing -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/WorkGivers/WorkGiverDef[defName = "PlantsCut"]/giverClass</xpath>
+		<value>
+			<giverClass>RWP.WorkGiver_PlantsCut_IgnoreHarvestable</giverClass>
+		</value>
+	</Operation>
+
 </Patch>

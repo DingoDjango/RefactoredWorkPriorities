@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -19,9 +20,9 @@ namespace RWP
 			return !Settings.PrioritizeRottable;
 		}
 
-		public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn) //Lists all items which need hauling and have CompProperties_Rottable
+		public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn) //Finds all items which need hauling and have CompProperties_Rottable
 		{
-			return pawn.Map.listerHaulables.ThingsPotentiallyNeedingHauling().FindAll(t => t.def.comps.Exists(tc => tc.compClass == typeof(CompRottable)));
+			return pawn.Map.listerHaulables.ThingsPotentiallyNeedingHauling().Where(t => t.def.comps.Exists(tc => tc.compClass == typeof(CompRottable)));
 		}
 
 		public override float GetPriority(Pawn pawn, TargetInfo t)

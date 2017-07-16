@@ -9,13 +9,13 @@ namespace RWP
 	{
 		public Designator_ForcedRepair()
 		{
-			this.defaultLabel = "Designator_ForcedRepair".Translate();
-			this.defaultDesc = "Designator_ForcedRepairDesc".Translate();
+			this.defaultLabel = Settings.labelForcedRepair;
+			this.defaultDesc = Settings.descForcedRepair;
 			this.icon = ContentFinder<Texture2D>.Get("Designations/ForcedRepair", true);
 			this.soundDragSustain = SoundDefOf.DesignateDragStandard;
 			this.soundDragChanged = SoundDefOf.DesignateDragStandardChanged;
 			this.useMouseIcon = true;
-			this.soundSucceeded = SoundDefOf.DesignateHaul; //???
+			this.soundSucceeded = SoundDefOf.DesignateDeconstruct; //Test for appropriate sound
 			this.hotKey = KeyBindingDef.Named("DesignatorForcedRepair");
 		}
 
@@ -54,7 +54,7 @@ namespace RWP
 
 		public override void DesignateThing(Thing t)
 		{
-			base.Map.designationManager.AddDesignation(new Designation(t, Controller.DefOf_RWP_ForcedRepair));
+			base.Map.designationManager.AddDesignation(new Designation(t, Settings.DefOf_RWP_ForcedRepair));
 		}
 
 		public override AcceptanceReport CanDesignateThing(Thing t)
@@ -79,7 +79,7 @@ namespace RWP
 				return false;
 			}
 
-			if (base.Map.designationManager.DesignationOn(t, Controller.DefOf_RWP_ForcedRepair) != null)
+			if (base.Map.designationManager.DesignationOn(t, Settings.DefOf_RWP_ForcedRepair) != null)
 			{
 				return false;
 			}

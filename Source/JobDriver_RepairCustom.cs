@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -9,7 +8,6 @@ namespace RWP
 {
 	public class JobDriver_RepairCustom : JobDriver_Repair
 	{
-		[DebuggerHidden]
 		protected override IEnumerable<Toil> MakeNewToils()
 		{
 			/* The final "repair" Toil ends the current job after it's done. 

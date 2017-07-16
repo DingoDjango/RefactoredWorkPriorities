@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-	<RWP>Refactored Work Priorities</RWP>
+	<RWP_RepairThreshold_Label>&lt;b&gt;[维修]&lt;/b&gt; 维修临界值（百分比）: &lt;b&gt;&lt;color=orange&gt;{0}%&lt;/color&gt;&lt;/b&gt;</RWP_RepairThreshold_Label>
+	<RWP_RepairThreshold_Desc>设定居民开始维修损坏物品的耐久度临界值。居民不会维修耐久度在这个百分比之上的物品。</RWP_RepairThreshold_Desc>
 
-	<RWP_setting_repairThresholdInt_label>&lt;b&gt;[维修]&lt;/b&gt; 维修临界值（百分比）: &lt;b&gt;&lt;color=orange&gt;{0}%&lt;/color&gt;&lt;/b&gt;</RWP_setting_repairThresholdInt_label>
-	<RWP_setting_repairThresholdInt_desc>设定居民开始维修损坏物品的耐久度临界值。居民不会维修耐久度在这个百分比之上的物品。</RWP_setting_repairThresholdInt_desc>
+	<RWP_PrioritizeRottable_Label>&lt;b&gt;[搬运工]&lt;/b&gt; 优先搬运易腐烂的物品</RWP_PrioritizeRottable_Label>
+	<RWP_PrioritizeRottable_Desc>搬运工会优先搬运易腐烂的物品（如玉米，食物，等等）然后是一般物品。</RWP_PrioritizeRottable_Desc>
 
-	<RWP_setting_haulRottables_label>&lt;b&gt;[搬运工]&lt;/b&gt; 优先搬运易腐烂的物品</RWP_setting_haulRottables_label>
-	<RWP_setting_haulRottables_desc>搬运工会优先搬运易腐烂的物品（如玉米，食物，等等）然后是一般物品。</RWP_setting_haulRottables_desc>
+	<RWP_PrioritizeDeteriorating_Label>&lt;b&gt;[搬运工]&lt;/b&gt; 优先搬运易老化的物品</RWP_PrioritizeDeteriorating_Label>
+	<RWP_PrioritizeDeteriorating_Desc>搬运工会优先搬运易老化的物品（如武器，木头，等等）然后是一般物品。</RWP_PrioritizeDeteriorating_Desc>
 
-	<RWP_setting_haulDeterioratables_label>&lt;b&gt;[搬运工]&lt;/b&gt; 优先搬运易老化的物品</RWP_setting_haulDeterioratables_label>
-	<RWP_setting_haulDeterioratables_desc>搬运工会优先搬运易老化的物品（如武器，木头，等等）然后是一般物品。</RWP_setting_haulDeterioratables_desc>
-
-	<RWP_setting_haulDeterioratables_HealthThresholdInt>&lt;b&gt;[Haul]&lt;/b&gt; Deterioratable HP threshold percentage: &lt;b&gt;&lt;color=orange&gt;{0}%&lt;/color&gt;&lt;/b&gt;</RWP_setting_haulDeterioratables_HealthThresholdInt>
-	<RWP_setting_haulDeterioratables_HealthThresholdInt_desc>If "Prioritise hauling deterioratables" is enabled, skip items if their current health falls below this percentage.</RWP_setting_haulDeterioratables_HealthThresholdInt_desc>
+	<RWP_DeterioratableMinHealthPercent_Label>&lt;b&gt;[Haul]&lt;/b&gt; Deterioratable HP threshold percentage: &lt;b&gt;&lt;color=orange&gt;{0}%&lt;/color&gt;&lt;/b&gt;</RWP_DeterioratableMinHealthPercent_Label>
+	<RWP_DeterioratableMinHealthPercent_Label_Desc>If "Prioritise hauling deterioratables" is enabled, skip items if their current health falls below this percentage.</RWP_DeterioratableMinHealthPercent_Label_Desc>
 
 	<Designator_ForcedRepair>Repair (Ignore Threshold)</Designator_ForcedRepair>
 	<Designator_ForcedRepairDesc>Instruct colonists to repair the designated buildings even if their HP is above the assigned Repair Threshold.</Designator_ForcedRepairDesc>	

@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <WorkGivers>
 
+	<!-- Harvest for Growers: harvest plants with designation Harvest that spawn a harvestedThing -->
+
+	<WorkGiverDef>
+		<defName>HarvestYieldingPlants</defName>
+		<label>harvest plants which yield produce</label>
+		<giverClass>RWP.WorkGiver_PlantsCut_HarvestForGrowers</giverClass>
+		<workType>Growing</workType>
+		<priorityInType>10</priorityInType>
+		<verb>harvest</verb>
+		<gerund>harvesting</gerund>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+
 	<!-- Haul rottable: priority below RearmTraps, above DoBillsCremate / HandMeThatBrick -->
 
 	<WorkGiverDef>

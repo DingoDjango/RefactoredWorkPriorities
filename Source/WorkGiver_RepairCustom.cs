@@ -12,14 +12,14 @@ namespace RWP
 				return base.HasJobOnThing(pawn, t, true);
 			}
 
-			if (pawn.Map.designationManager.DesignationOn(t, Controller.DefOf_RWP_ForcedRepair) != null)
+			if (pawn.Map.designationManager.DesignationOn(t, Settings.DefOf_RWP_ForcedRepair) != null)
 			{
 				return base.HasJobOnThing(pawn, t, false);
 			}
 
 			float hitPointPercentage = 100f * (float)t.HitPoints / (float)t.MaxHitPoints;
 
-			return base.HasJobOnThing(pawn, t, false) && hitPointPercentage <= Settings.RepairThreshold;
+			return hitPointPercentage <= Settings.RepairThreshold && base.HasJobOnThing(pawn, t, false);
 		}
 	}
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -23,20 +24,19 @@ namespace RWP
 		{
 			float tHealthPercent = 100f * (float)t.HitPoints / (float)t.MaxHitPoints;
 
-			return base.HasJobOnThing(pawn, t) && tHealthPercent >= Settings.DeterioratableMinHealthPercent;
+			return tHealthPercent >= Settings.DeterioratableMinHealthPercent && base.HasJobOnThing(pawn, t);
 		}
 
-		public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn) //Lists all items with DeteriorationRate above 0 that aren't under a roof
+		public override IEnumerable<Thing> PotentialWorkThingsGlobal(Pawn pawn) //Finds all actively deteriorating items
 		{
-			return pawn.Map.listerHaulables.ThingsPotentiallyNeedingHauling().FindAll(t => GridsUtility.GetRoof(t.Position, t.Map) == null && t.GetStatValue(StatDefOf.DeteriorationRate, true) > 0f);
+			return pawn.Map.listerHaulables.ThingsPotentiallyNeedingHauling().Where(t => t.GetStatValue(StatDefOf.DeteriorationRate, true) > 0f && GridsUtility.GetRoof(t.Position, t.Map) == null);
 		}
 
 		public override float GetPriority(Pawn pawn, TargetInfo t)
 		{
 			Thing thing = t.Thing;
-			float deteriorationRate = thing.HitPoints / thing.GetStatValue(StatDefOf.DeteriorationRate, true);
 
-			return 1f / deteriorationRate;
+			return thing.GetStatValue(StatDefOf.DeteriorationRate, true) / (float)thing.HitPoints;
 		}
 	}
 }
