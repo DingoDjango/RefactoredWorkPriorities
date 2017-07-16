@@ -8,6 +8,7 @@ The mod includes an options menu (**Options > Mod Settings**).
 * **Removing roofs** prioritised above building roofs.
 * **Custom repair threshold** - you decide when repairs should be made.
 * **Repair designator** - force repairs on buildings above the repair threshold.
+* **Harvest Plants** assigned to Growers if the plant yields produce.
 * **Prioritise rottables** - haul corn, meals etc. as a high priority.
 * **Prioritise deterioratables** - haul items as a high priority.
 * **Set an item HP threshold** to avoid prioritising items with low HP.
