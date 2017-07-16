@@ -25,12 +25,12 @@ namespace RWP
 				Rect currentRectRight = currentRect.RightHalf().Rounded();
 
 				//Text label for repair threshold, translated, with tooltip.
-				Widgets.Label(currentRectLeft, Settings.labelRepairThreshold);
+				Widgets.Label(currentRectLeft, LanguageStrings.labelRepairThreshold);
 				if (Mouse.IsOver(currentRectLeft))
 				{
 					Widgets.DrawHighlight(currentRectLeft);
 				}
-				TooltipHandler.TipRegion(currentRectLeft, Settings.descRepairThreshold);
+				TooltipHandler.TipRegion(currentRectLeft, LanguageStrings.descRepairThreshold);
 
 				//Increment value by -1 (button).
 				if (Widgets.ButtonText(new Rect(currentRectRight.xMin, currentRectRight.y, currentRectRight.height, currentRectRight.height), "-", true, false, true))
@@ -56,11 +56,11 @@ namespace RWP
 
 			list.Gap(20f);
 
-			list.CheckboxLabeled(Settings.labelPrioritizeRottable, ref Settings.PrioritizeRottable, Settings.descPrioritizeRottable);
+			list.CheckboxLabeled(LanguageStrings.labelPrioritizeRottable, ref Settings.PrioritizeRottable, LanguageStrings.descPrioritizeRottable);
 
 			list.Gap(20f);
 
-			list.CheckboxLabeled(Settings.labelPrioritizeDeteriorating, ref Settings.PrioritizeDeteriorating, Settings.descPrioritizeDeteriorating);
+			list.CheckboxLabeled(LanguageStrings.labelPrioritizeDeteriorating, ref Settings.PrioritizeDeteriorating, LanguageStrings.descPrioritizeDeteriorating);
 
 			list.Gap(20f);
 
@@ -71,12 +71,12 @@ namespace RWP
 				Rect currentRectRight = currentRect.RightHalf().Rounded();
 
 				//Text label for item haul threshold, translated, with tooltip.
-				Widgets.Label(currentRectLeft, Settings.labelDeterioratableMinHealth);
+				Widgets.Label(currentRectLeft, LanguageStrings.labelDeterioratableMinHealth);
 				if (Mouse.IsOver(currentRectLeft))
 				{
 					Widgets.DrawHighlight(currentRectLeft);
 				}
-				TooltipHandler.TipRegion(currentRectLeft, Settings.descDeterioratableMinHealth);
+				TooltipHandler.TipRegion(currentRectLeft, LanguageStrings.descDeterioratableMinHealth);
 
 				//Increment value by -1 (button).
 				if (Widgets.ButtonText(new Rect(currentRectRight.xMin, currentRectRight.y, currentRectRight.height, currentRectRight.height), "-", true, false, true))

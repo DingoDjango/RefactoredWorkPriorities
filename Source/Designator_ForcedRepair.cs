@@ -9,8 +9,8 @@ namespace RWP
 	{
 		public Designator_ForcedRepair()
 		{
-			this.defaultLabel = Settings.labelForcedRepair;
-			this.defaultDesc = Settings.descForcedRepair;
+			this.defaultLabel = LanguageStrings.labelForcedRepair;
+			this.defaultDesc = LanguageStrings.descForcedRepair;
 			this.icon = ContentFinder<Texture2D>.Get("Designations/ForcedRepair", true);
 			this.soundDragSustain = SoundDefOf.DesignateDragStandard;
 			this.soundDragChanged = SoundDefOf.DesignateDragStandardChanged;
