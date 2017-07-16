@@ -12,6 +12,20 @@ namespace RWP
 
 		public override void DoSettingsWindowContents(Rect inRect)
 		{
+			#region Translation Keys
+			string labelRepairThreshold = "RWP_RepairThreshold_Label".Translate(new object[] { Settings.RepairThreshold });
+			string descRepairThreshold = "RWP_RepairThreshold_Desc".Translate();
+
+			string labelPrioritizeRottable = "RWP_PrioritizeRottable_Label".Translate();
+			string descPrioritizeRottable = "RWP_PrioritizeRottable_Desc".Translate();
+
+			string labelPrioritizeDeteriorating = "RWP_PrioritizeDeteriorating_Label".Translate();
+			string descPrioritizeDeteriorating = "RWP_PrioritizeDeteriorating_Desc".Translate();
+
+			string labelDeterioratableMinHealth = "RWP_DeterioratableMinHealthPercent_Label".Translate(new object[] { Settings.DeterioratableMinHealthPercent });
+			string descDeterioratableMinHealth = "RWP_DeterioratableMinHealthPercent_Label_Desc".Translate();
+			#endregion
+
 			Listing_Standard list = new Listing_Standard();
 			list.ColumnWidth = inRect.width;
 			list.Begin(inRect);
@@ -25,12 +39,12 @@ namespace RWP
 				Rect currentRectRight = currentRect.RightHalf().Rounded();
 
 				//Text label for repair threshold, translated, with tooltip.
-				Widgets.Label(currentRectLeft, LanguageStrings.labelRepairThreshold);
+				Widgets.Label(currentRectLeft, labelRepairThreshold);
 				if (Mouse.IsOver(currentRectLeft))
 				{
 					Widgets.DrawHighlight(currentRectLeft);
 				}
-				TooltipHandler.TipRegion(currentRectLeft, LanguageStrings.descRepairThreshold);
+				TooltipHandler.TipRegion(currentRectLeft, descRepairThreshold);
 
 				//Increment value by -1 (button).
 				if (Widgets.ButtonText(new Rect(currentRectRight.xMin, currentRectRight.y, currentRectRight.height, currentRectRight.height), "-", true, false, true))
@@ -56,11 +70,11 @@ namespace RWP
 
 			list.Gap(20f);
 
-			list.CheckboxLabeled(LanguageStrings.labelPrioritizeRottable, ref Settings.PrioritizeRottable, LanguageStrings.descPrioritizeRottable);
+			list.CheckboxLabeled(labelPrioritizeRottable, ref Settings.PrioritizeRottable, descPrioritizeRottable);
 
 			list.Gap(20f);
 
-			list.CheckboxLabeled(LanguageStrings.labelPrioritizeDeteriorating, ref Settings.PrioritizeDeteriorating, LanguageStrings.descPrioritizeDeteriorating);
+			list.CheckboxLabeled(labelPrioritizeDeteriorating, ref Settings.PrioritizeDeteriorating, descPrioritizeDeteriorating);
 
 			list.Gap(20f);
 
@@ -71,12 +85,12 @@ namespace RWP
 				Rect currentRectRight = currentRect.RightHalf().Rounded();
 
 				//Text label for item haul threshold, translated, with tooltip.
-				Widgets.Label(currentRectLeft, LanguageStrings.labelDeterioratableMinHealth);
+				Widgets.Label(currentRectLeft, labelDeterioratableMinHealth);
 				if (Mouse.IsOver(currentRectLeft))
 				{
 					Widgets.DrawHighlight(currentRectLeft);
 				}
-				TooltipHandler.TipRegion(currentRectLeft, LanguageStrings.descDeterioratableMinHealth);
+				TooltipHandler.TipRegion(currentRectLeft, descDeterioratableMinHealth);
 
 				//Increment value by -1 (button).
 				if (Widgets.ButtonText(new Rect(currentRectRight.xMin, currentRectRight.y, currentRectRight.height, currentRectRight.height), "-", true, false, true))

@@ -23,9 +23,12 @@ namespace RWP
 				{
 					var plant = designation.target.Thing as Plant;
 
-					if (plant != null && plant.def.plant.harvestedThingDef == null)
+					if (plant != null)
 					{
-						yield return designation.target.Thing;
+						if (plant.def.plant.IsTree || plant.def.plant.harvestedThingDef == null)
+						{
+							yield return designation.target.Thing;
+						}
 					}
 				}
 			}
