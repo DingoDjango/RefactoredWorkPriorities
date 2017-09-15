@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<RWP_RepairThreshold_Label>&lt;b&gt;[Reparieren]&lt;/b&gt; Repariere Dinge wenn HP unter: &lt;b&gt;&lt;color=orange&gt;{0}%&lt;/color&gt;&lt;/b&gt;</RWP_RepairThreshold_Label>
+	<RWP_RepairThreshold_Desc>Lege fest ab wann repariert wird. Dinge mit mehr HP als der festgelegte Wert werden nicht repariert.</RWP_RepairThreshold_Desc>
+
+	<RWP_PrioritizeRottable_Label>&lt;b&gt;[Tragen]&lt;/b&gt; Priorisiere das Tragen von verderblichen Waren</RWP_PrioritizeRottable_Label>
+	<RWP_PrioritizeRottable_Desc>Träger werden Dinge die verrotten können bevorzugt tragen.</RWP_PrioritizeRottable_Desc>
+
+	<RWP_PrioritizeDeteriorating_Label>&lt;b&gt;[Tragen]&lt;/b&gt; Priorisiere das Tragen von zersetzbaren Waren</RWP_PrioritizeDeteriorating_Label>
+	<RWP_PrioritizeDeteriorating_Desc>Träger werden Dinge die sich zersetzen können bevorzugt tragen.</RWP_PrioritizeDeteriorating_Desc>
+
+	<RWP_DeterioratableMinHealthPercent_Label>&lt;b&gt;[Tragen]&lt;/b&gt; HP Obergrenze für zersetzbarer Gegenstände: &lt;b&gt;&lt;color=orange&gt;{0}%&lt;/color&gt;&lt;/b&gt;</RWP_DeterioratableMinHealthPercent_Label>
+	<RWP_DeterioratableMinHealthPercent_Label_Desc>Wenn "Priorisiere das Tragen von zersetzbaren Waren" aktiv ist werden Dinge unterhalb der gesetzten HP-Grenze ignoriert.</RWP_DeterioratableMinHealthPercent_Label_Desc>
+
+	<Designator_ForcedRepair>Reparieren (Grenze Ignorieren)</Designator_ForcedRepair>
+	<Designator_ForcedRepairDesc>Repariert Gebäude auch wenn die HP noch oberhalb der gesetzten Grenze sind.</Designator_ForcedRepairDesc>   
+
+</LanguageData>
