@@ -13,7 +13,7 @@
 	<RWP_DeterioratableMinHealthPercent_Label>&lt;b&gt;[Tragen]&lt;/b&gt; HP Obergrenze für zersetzbarer Gegenstände: &lt;b&gt;&lt;color=orange&gt;{0}%&lt;/color&gt;&lt;/b&gt;</RWP_DeterioratableMinHealthPercent_Label>
 	<RWP_DeterioratableMinHealthPercent_Label_Desc>Wenn "Priorisiere das Tragen von zersetzbaren Waren" aktiv ist werden Dinge unterhalb der gesetzten HP-Grenze ignoriert.</RWP_DeterioratableMinHealthPercent_Label_Desc>
 
-	<Designator_ForcedRepair>Reparieren (Grenze Ignorieren)</Designator_ForcedRepair>
-	<Designator_ForcedRepairDesc>Repariert Gebäude auch wenn die HP noch oberhalb der gesetzten Grenze sind.</Designator_ForcedRepairDesc>   
+	<Designator_ForcedRepair>Erzwinge Reperatur</Designator_ForcedRepair>
+	<Designator_ForcedRepairDesc>Erzwingt die sofortige Reperatur von beschädigten Gebäuden und Objekten. Die in den Optionen festgelegte Grenze spielt dabei keine Rolle.</Designator_ForcedRepairDesc>   
 
 </LanguageData>
